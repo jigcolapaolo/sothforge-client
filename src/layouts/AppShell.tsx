@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
+import Image from 'next/image'
 import { Boxes, ChevronRight, LayoutDashboard, LogOut, Menu, Search, Users, X } from 'lucide-react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { boardsApi, organizationsApi, projectsApi, type Organization } from '@/lib/api'
@@ -114,7 +115,7 @@ export function AppShell() {
       <aside className={mobile ? 'sidebar open' : 'sidebar'}>
         <div className="sidebar-top">
           <Link to="/app" className="brand">
-            <span className="brand-mark">S</span>
+            <Image className="brand-icon" src="/SothForgeIcon.webp" alt="" width={29} height={29} />
             <span>SothForge</span>
           </Link>
           <button

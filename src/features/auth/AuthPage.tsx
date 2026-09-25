@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '@/lib/auth'
@@ -31,7 +32,7 @@ export function AuthPage({ register = false }: { register?: boolean }) {
     <main className="auth-page">
       <div className="auth-panel">
         <div className="brand">
-          <span className="brand-mark">S</span>
+          <Image className="brand-icon" src="/SothForgeIcon.webp" alt="" width={29} height={29} />
           <span>SothForge</span>
         </div>
         <div className="eyebrow">Organiza el trabajo de tu equipo</div>
